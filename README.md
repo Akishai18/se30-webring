@@ -1,6 +1,6 @@
 # SE 2030 Webring
 
-![SE '30 Webring Icon](https://se30webring.com/assets/icon-yellow.svg)
+<img src="https://se30webring.com/assets/icon-yellow.svg" alt="SE '30 Webring Icon" width="64" height="64" />
 
 A webring for Software Engineering class of 2030 students at the University of Waterloo.
 
@@ -36,11 +36,11 @@ Here's what to add to your personal website in order to be part of the webring f
 
 ```html
 <div style="display: flex; align-items: center; justify-content: center; gap: 12px;">
-  <a href="https://se30webring.com?from=https://your-site.com&dir=prev" style="text-decoration: none; color: #FFCE1A; display: flex; align-items: center; font-size: 1.5rem;">←</a>
-  <a href="https://se30webring.com?from=https://your-site.com" target="_blank" style="text-decoration: none;">
+  <a href="https://se30webring.com?from=https://your-site.com&dir=prev" style="text-decoration: none; color: #FFCE1A; font-size: 1.5rem; line-height: 1; display: flex; align-items: center;">←</a>
+  <a href="https://se30webring.com" target="_blank" style="text-decoration: none; display: flex; align-items: center;">
     <img src="https://se30webring.com/assets/icon-yellow.svg" alt="SE '30 Webring" style="width: 32px; height: 32px;" />
   </a>
-  <a href="https://se30webring.com?from=https://your-site.com&dir=next" style="text-decoration: none; color: #FFCE1A; display: flex; align-items: center; font-size: 1.5rem;">→</a>
+  <a href="https://se30webring.com?from=https://your-site.com&dir=next" style="text-decoration: none; color: #FFCE1A; font-size: 1.5rem; line-height: 1; display: flex; align-items: center;">→</a>
 </div>
 <!-- Make sure to replace 'your-site.com' with your actual personal site URL -->
 <!-- Note: You can use icon-yellow.svg (default) or icon.svg (black) depending on your site's color scheme -->
@@ -50,15 +50,15 @@ Here's what to add to your personal website in order to be part of the webring f
 
 ```jsx
 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-  <a href={`https://se30webring.com?from=${window.location.href}&dir=prev`} style={{ textDecoration: 'none', color: '#FFCE1A', display: 'flex', alignItems: 'center', fontSize: '1.5rem' }}>←</a>
-  <a href={`https://se30webring.com?from=${window.location.href}`} target="_blank" style={{ textDecoration: 'none' }}>
+  <a href={`https://se30webring.com?from=${window.location.href}&dir=prev`} style={{ textDecoration: 'none', color: '#FFCE1A', fontSize: '1.5rem', lineHeight: 1, display: 'flex', alignItems: 'center' }}>←</a>
+  <a href="https://se30webring.com" target="_blank" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
     <img 
       src="https://se30webring.com/assets/icon-yellow.svg" 
       alt="SE '30 Webring" 
-      style={{ width: '32px', height: '32px', opacity: 0.8 }} 
+      style={{ width: '32px', height: '32px' }} 
     />
   </a>
-  <a href={`https://se30webring.com?from=${window.location.href}&dir=next`} style={{ textDecoration: 'none', color: '#FFCE1A', display: 'flex', alignItems: 'center', fontSize: '1.5rem' }}>→</a>
+  <a href={`https://se30webring.com?from=${window.location.href}&dir=next`} style={{ textDecoration: 'none', color: '#FFCE1A', fontSize: '1.5rem', lineHeight: 1, display: 'flex', alignItems: 'center' }}>→</a>
 </div>
 // Note: You can use icon-yellow.svg (default) or icon.svg (black) depending on your site's color scheme
 ```
