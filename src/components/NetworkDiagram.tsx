@@ -102,8 +102,8 @@ export function NetworkDiagram({ students, onNodeClick }: NetworkDiagramProps) {
   }
 
   return (
-    <div className="w-full h-full bg-[#181818] relative">
-      <svg ref={svgRef} className="w-full h-full" />
+    <div className="w-full h-full bg-[#181818] relative overflow-hidden">
+      <svg ref={svgRef} className="w-full h-full overflow-hidden" />
       <div className="absolute bottom-4 left-4 bg-[#1a1a1a] border border-white/10 rounded-md px-3 py-2 text-sm text-white/70 font-medium">
         {UI_TEXT.SITES_COUNT_LABEL} {students.length}
       </div>

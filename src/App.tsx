@@ -11,6 +11,8 @@ import { StudentList } from './components/StudentList';
 import { NetworkDiagram } from './components/NetworkDiagram';
 import { StudentModal } from './components/StudentModal';
 import { WebRingWidget } from './components/WebRingWidget';
+import { WebringExpandable } from './components/WebringExpandable';
+import { JoinExpandable } from './components/JoinExpandable';
 
 export function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -83,11 +85,19 @@ export function App() {
 
           <StudentList students={filteredStudents} onProfileClick={handleNodeClick} />
 
-          {/* Mobile Widget at Bottom */}
-          <div className="sm:hidden mt-8 pb-4 flex justify-center">
-            <WebRingWidget
-              sites={students.map((s) => s.website).filter((url): url is string => url !== undefined)}
-            />
+          {/* Mobile Information Sections and Widget */}
+          <div className="sm:hidden mt-8 pb-4">
+            <div className="text-sm text-white/60 mb-6">
+              <div className="flex flex-col gap-3 mb-6">
+                <WebringExpandable />
+                <JoinExpandable />
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <WebRingWidget
+                sites={students.map((s) => s.website).filter((url): url is string => url !== undefined)}
+              />
+            </div>
           </div>
         </div>
       </main>
